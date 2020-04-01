@@ -1,0 +1,139 @@
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add tde following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify tde charset parameter to specify tde        -->
+<!--  character set of your HTML page.                                        -->
+<!--  ----------------------------------------------------------------------  -->
+
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add tde following <FORM> element to your page.             -->
+<!--  ----------------------------------------------------------------------  -->
+
+<style>
+body {font-family: Arial}
+
+select,input[type=text]{
+	width: 100%;
+	pading:12px 20px;
+	margin: 5px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	height: 25;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+}
+
+button:hover{
+	opacity: 0.8;
+}
+
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+  padding: 50px;
+  position: relative;
+}
+
+.content-header {
+	position: center;
+}
+
+</style>
+
+<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" metdod="POST">
+
+<input type=hidden name="oid" value="00D1s0000000SzS">
+<input type=hidden name="retURL" value="http://google.com">
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: tdese fields are optional debugging elements. Please uncomment    -->
+<!--  tdese lines if you wish to test in debug mode.                          -->
+<!--  <input type="hidden" name="debug" value=1>                              -->
+<!--  <input type="hidden" name="debugEmail"                                  -->
+<!--  value="cuong.nguyen@crosscloudpartners.com">                            -->
+<!--  ----------------------------------------------------------------------  -->
+<div class="modal">
+	<div class="modal-content">
+		<h3 style="text-align:center"> Create New Lead </h3>
+		<hr>
+		</br>
+		<label for="first_name"><b>First Name: </b></label>
+		<input  id="first_name" maxlengtd="40" name="first_name" size="20" type="text" />
+
+		<label for="last_name"><b>Last Name:</b></label>
+
+		<input  id="last_name" maxlengtd="80" name="last_name" size="20" type="text" />
+
+		<label for="email"><b>Email: </b></label>
+
+		<input  id="email" maxlengtd="80" name="email" size="20" type="text" />
+
+		<label for="city"><b>City:</b></label>
+
+		<input  id="city" maxlengtd="40" name="city" size="20" type="text" />
+
+		<label for="state"><b>State/Province: </b></label>
+
+		<input  id="state" maxlengtd="20" name="state" size="20" type="text" />
+
+		<label><b>Gender:</b></label>
+
+		<select  id="00N1s000000YYSQ" name="00N1s000000YYSQ" title="Gender">
+			<option value="">--None--</option>
+			<option value="Male">Male</option>
+			<option value="Female">Female</option>
+		</select>
+
+		<label><b>Risk:</b></label>
+
+		<select  id="00N1s000000YYSp" name="00N1s000000YYSp" title="Risk">
+			<option value="">--None--</option>
+			<option value="Bereaved Family">Bereaved Family</option>
+			<option value="Critical Illness">Critical Illness</option>
+			<option value="Hospitalization">Hospitalization</option>
+			<option value="Educational Expense">Educational Expense</option>
+			<option value="Saving for future">Saving for future</option>
+			<option value="Accident">Accident</option>
+			<option value="Otders">Others</option>
+		</select>
+
+		<label><b>Lead Type:</b></label>
+		<select >
+			<option value="">--None--</option>
+			<option value="Male">Individual</option>
+			<option value="Female">Organization</option>
+		</select>
+	</br>
+
+		<!-- <input type="submit" name="Submit"> -->
+		<button type="submit">Submit</button>
+	</div>
+	
+</div>
+
+
+</form>
